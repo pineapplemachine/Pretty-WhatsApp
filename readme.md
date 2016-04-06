@@ -1,3 +1,5 @@
+**This repo is currently under construction. Please come back soon!**
+
 # Summary
 
 When long pressing a conversation in WhatsApp it presents an option to "Email chat". This is a script for Python 2.7 which generates an easy-on-the-eyes html page from the jumble of files attached to a received email.

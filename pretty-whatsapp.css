@@ -1,0 +1,40 @@
+body {
+    background-color: #ddd;
+}
+
+img {
+    height: 300px;
+}
+
+.content {
+    background-color: #fff;
+    margin: 0px 80px;
+    padding: 0px 10px;
+}
+
+.message{
+    
+}
+
+.message .datetime{
+    float: left;
+    opacity: 0.4;
+    margin-right: 10px;
+}
+.message .author{
+    float: left;
+    margin-right: 10px;
+    color: #0050ee;
+    width: 100px;
+}
+.message .content{
+    margin: 5px;
+    display: flex;
+}
+
+.divider{
+    width: auto;
+    height: 2px;
+    margin: 6px 2px;
+    background-color: #aaa;
+}
