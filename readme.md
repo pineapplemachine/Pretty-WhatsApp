@@ -1,17 +1,44 @@
-**This repo is currently under construction. Please come back soon!**
-
 # Summary
 
-When long pressing a conversation in WhatsApp it presents an option to "Email chat". This is a script for Python 2.7 which generates an easy-on-the-eyes html page from the jumble of files attached to a received email.
+WhatsApp offers an option to "Email chat" feature, which sends a mess of attachments not so great for human-readability. Pretty-WhatsApp is a script for Python 2.7 which generates an easy-on-the-eyes HTML page from the jumble of files attached to an email received using this feature. 
 
-Tested with Chrome. Functionality and aesthetics are not guaranteed in other browsers, least of all IE.
+Please note that your browser may not support embedding of all media attachments WhatsApp includes in your emailed archive, and this may detract from your chat history viewing experience.
 
 Pretty-WhatsApp is released under the [zlib/libpng license](license.txt).
 
 # Usage
 
-To use, run this script with an argument which is the path to a directory containing *all* of the attachments included with an archive email sent using WhatsApp.
+To get an email with your chat history and attached files, select "Email chat" in the menu appearing when long press a conversation, or when tap the dots while viewing a conversation and select "More". This script is intended for emailed chats sent with the "Attach media" option. After selecting the option, you'll be prompted to send an email. To use Pretty-WhatsApp you should view this email on your computer and download all the attachments into one directory.
 
-``` python
-python pretty-whatsapp.py -i path/to/archive -o path/to/output.html
+You can then run the script like this, which will cause a `pretty-whatsapp.html` file to be generated and written to the input directory given.
+
+``` text
+python pretty-whatsapp.py -i path/to/downloaded/files
 ```
+
+The script supports some additional, optional arguments:
+
+* `-o` Set the location of the outputted HTML file. (Default: `[input path]/pretty-whatsapp.html`)
+* `-c` Set the CSS file used to style the outputted page. (Default: `pretty-whatsapp.css`)
+* `-t` Set the number of seconds between consecutive messages before a divider is inserted. (Default: `18000`)
+* `-f` Set how dates are formatted in the outputted HTML. (Default: `%d/%m/%y %H:%M`)
+* `-y` Silence requests to confirm before overwriting existing files.
+
+# Example
+
+[View example webpage](example-archive/pretty-whatsapp.html)
+
+You could try generating this page on your own by running `python pretty-whatsapp.py -i example-archive` from the repository's root directory.
+
+``` text
+client-227:whatsapp pineapple$ python pretty-whatsapp.py -i example-archive/
+Pretty-WhatsApp 1.0.0 by Sophie Kirschner
+Reading chat log from input directory "example-archive/".
+Parsing chat messages.
+Generating output HTML from messages.
+Copying CSS to path "example-archive/pretty-whatsapp.css".
+Writing HTML to path "example-archive/pretty-whatsapp.html".
+All done!
+```
+
+![Screenshot of example webpage](example-archive/example-screenshot.png)
