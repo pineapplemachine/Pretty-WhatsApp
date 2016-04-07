@@ -1,0 +1,13 @@
+04/01/2016, 8:52 AM - Brian: This is an amazing script you've written, Sophie.
+04/01/2016, 8:54 AM - Sophie: Why thank you, Brian.
+04/01/2016, 8:55 AM - Brian: Talking is a thing that people do over WhatsApp.
+04/01/2016, 9:10 AM - Sophie: Is it?
+04/01/2016, 9:12 AM - Brian: It is, yes.
+04/01/2016, 9:15 AM - Sophie: Did you know that if you long press a conversation or tap the dots in the corner then "More" you'll see a menu with an option that says "Email chat"?
+04/01/2016, 9:15 AM - Sophie: If you select that and then choose the "Attach media" option you can email yourself your entire chat history!
+04/01/2016, 9:16 AM - Brian: That's pretty astounding.
+04/01/2016, 9:22 AM - Sophie: But the files it sends this way are kind of a jumbled mess and impractical for human eyes. So this script takes a directory containing all the files you got in that email, and wraps it up in a pretty HTML file with all the photos and audio embedded.
+04/01/2016, 9:23 AM - Brian: It's even open-source and permissively licensed! How would I use it?
+04/01/2016, 9:24 AM - Sophie: Well, it's easy. You just RTFM and violà, there's your prettified WhatsApp history!
+04/01/2016, 3:41 PM - Sophie: Take a look at this awesome insect by the way.
+04/01/2016, 3:42 PM - Sophie: IMG-20150821-WA0000.jpg (file attached)
