@@ -1,6 +1,6 @@
 # Summary
 
-WhatsApp offers an option to "Email chat" feature, which sends a mess of attachments not so great for human-readability. Pretty-WhatsApp is a script for Python 2.7 which generates an easy-on-the-eyes HTML page from the jumble of files attached to an email received using this feature. 
+WhatsApp offers an "Email chat" feature, which emails your chat history as a mess of email attachments not so great for human-readability. Pretty-WhatsApp is a script for Python 2.7 which generates an easy-on-the-eyes webpage from the jumble of files attached to those emails received using this feature. 
 
 Please note that your browser may not support embedding of all media attachments WhatsApp includes in your emailed archive, and this may detract from your chat history viewing experience.
 
@@ -8,7 +8,7 @@ Pretty-WhatsApp is released under the [zlib/libpng license](license.txt).
 
 # Usage
 
-To get an email with your chat history and attached files, select "Email chat" in the menu appearing when long press a conversation, or when tap the dots while viewing a conversation and select "More". This script is intended for emailed chats sent with the "Attach media" option. After selecting the option, you'll be prompted to send an email. To use Pretty-WhatsApp you should view this email on your computer and download all the attachments into one directory.
+To acquire an email with your chat history and attached files, select "Email chat" in the menu appearing when long pressing a conversation, or when tapping the dots while viewing a conversation and selecting "More". This script is intended for emailed chats sent with the "Attach media" option. After selecting the option, you'll be prompted to send an email. To use Pretty-WhatsApp you should view this sent email on your computer and download all the attachments into one directory.
 
 You can then run the script like this, which will cause a `pretty-whatsapp.html` file to be generated and written to the input directory given.
 
