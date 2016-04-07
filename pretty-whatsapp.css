@@ -77,7 +77,7 @@ a{
     padding: 0;
 }
 
-.document, .vcard, .audio, .video{
+.attached-document, .attached-vcard, .attached-audio, .attached-video, .attached-location, .unrecognized-media{
     font-style: italic;
 }
 
