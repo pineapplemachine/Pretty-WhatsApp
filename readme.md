@@ -8,7 +8,9 @@ Pretty-WhatsApp is released under the [zlib/libpng license](license.txt).
 
 # Usage
 
-To acquire an email with your chat history and attached files, select "Email chat" in the menu appearing when long pressing a conversation, or when tapping the dots while viewing a conversation and selecting "More". This script is intended for emailed chats sent with the "Attach media" option. After selecting the option, you'll be prompted to send an email. To use Pretty-WhatsApp you should view this sent email on your computer and download all the attachments into one directory.
+To get an email with your chat history and attached files, tap the three dots in the top right corner of one of your chats, tap "More >", then tap "Export chat". A popup will appear prompting you to export either with or without media. For the best results using the Pretty-WhatsApp tool, you should tap the "INCLUDE MEDIA" option in this popup. When you are prompted on how to share these files, you can select your email app and send the email with its attachments to your own email address. To use Pretty-WhatsApp, you will need to take all of the files that are sent as attachments in such an email and put them into one directory.
+
+_Old instructions which were for an old version of the app, preserved here for posterity:_ To acquire an email with your chat history and attached files, select "Email chat" in the menu appearing when long pressing a conversation, or when tapping the dots while viewing a conversation and selecting "More". This script is intended for emailed chats sent with the "Attach media" option. After selecting the option, you'll be prompted to send an email. To use Pretty-WhatsApp you should view this sent email on your computer and download all the attachments into one directory.
 
 You can then run the script like this, which will cause a `pretty-whatsapp.html` file to be generated and written to the input directory given.
 
