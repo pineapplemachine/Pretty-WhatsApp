@@ -17,15 +17,16 @@ import shutil
 
 
 # Regular expressions for matching and grouping text in the plaintext chat log
-newline_pattern = re.compile(r'\d\d/\d\d/20\d\d, \d\d?:\d\d [AP]M - ')
-message_pattern = re.compile(r'(?s)(\d\d/\d\d/20\d\d, \d\d?:\d\d [AP]M) - (.*?): (.*)')
+newline_pattern = re.compile(r'\d\d?/\d\d?/\d+, \d\d?:\d\d [AP]M - ')
+message_pattern = re.compile(r'(?s)(\d\d?/\d\d?/\d+, \d\d?:\d\d [AP]M) - (.*?): (.*)')
 chatlog_pattern = re.compile(r'WhatsApp Chat with (.*?)\.txt')
 attachment_pattern = re.compile(r'((.*?)-.*?-.*?\.(.*?)) \(file attached\)\s*(.*)')
 contact_pattern = re.compile(r'(.*?\.vcf) \(file attached\)')
 location_pattern = re.compile(r'location: (.*?\?q=(.*?),(.*))')
 
 # Format of dates in plaintext chat log
-input_dateformat = '%d/%m/%Y, %I:%M %p'
+old_input_dateformat = '%d/%m/%Y, %I:%M %p' # 2015
+new_input_dateformat = '%m/%d/%y, %I:%M %p' # 2019
 output_dateformat = '%d/%m/%y %H:%M'
 
 # Location of default files
@@ -112,10 +113,16 @@ class message(object):
     def parse(text):
         match = message_pattern.match(text)
         if match is not None:
-            return message(
-                datetime.strptime(match.group(1), input_dateformat),
-                match.group(2), match.group(3)
-            )
+            try:
+                return message(
+                    datetime.strptime(match.group(1), new_input_dateformat),
+                    match.group(2), match.group(3)
+                )
+            except ValueError:
+                return message(
+                    datetime.strptime(match.group(1), old_input_dateformat),
+                    match.group(2), match.group(3)
+                )
         else:
             return None
             
